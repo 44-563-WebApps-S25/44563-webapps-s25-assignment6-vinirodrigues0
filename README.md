@@ -2,3 +2,6 @@
 # WebApps-S25-Assignment-6
 Introduction to Java Script and DOM
 
+Hosted at <https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-vinirodrigues0/city.html>
+Hosted at <https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-vinirodrigues0/message.html>
+Hosted at <https://44-563-webapps-s25.github.io/44563-webapps-s25-assignment6-vinirodrigues0/dinner.html>
