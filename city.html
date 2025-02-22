@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Apps Lab/Assignment 6</title>
+</head> 
+
+<body>
+
+<h2>City game by Vinicius Rodrigues</h2>
+
+<form>
+    <label for="secret_city">Where in the world</label>
+    <input type="password" id="secret_city" value="San Diego"> <br>
+
+    <label for="guess_city">Guess the city</label>
+    <input type="text" id="guess_city"> <br>
+
+    <input type="button" onclick="checkCity()" value="Check the guess">
+</form>
+
+<p id="result">Oops: 0 | Found: 0 </p>
+
+<script>
+    let oops = 0;
+    let found = 0;
+
+    function checkCity() {
+        secret = document.getElementById("secret_city").value;
+        guess = document.getElementById("guess_city").value;
+
+        if (guess == secret) {
+            found++;
+            alert("GotCha");
+        }
+        else {
+            oops++;
+            alert("Awe");
+        }
+
+        document.getElementById("result").innerHTML = `Oops: ${oops} | Found: ${found}`;
+    }
+</script>
+
+</body>
+</html> 
