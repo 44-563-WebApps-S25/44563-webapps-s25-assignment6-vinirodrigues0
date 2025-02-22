@@ -20,7 +20,12 @@
 
 <p id="result">Oops: 0 | Found: 0 </p>
 
+<div>
+    <img id="petImage" src="rottweiler.jpg" width="150" height="150" onclick="updatePic()">
+</div>
+
 <script>
+    // Part 3: Form 
     let oops = 0;
     let found = 0;
 
@@ -39,6 +44,28 @@
 
         document.getElementById("result").innerHTML = `Oops: ${oops} | Found: ${found}`;
     }
+
+    // Part 4: Images
+    let usePic = 1;
+
+    function updatePic() {
+        img = document.getElementById("petImage");
+        switch (usePic) {
+            case 1:
+                img.src = "otter.jpg";
+                usePic = 2;
+                break;
+            case 2:
+                img.src = "dalmatian.jpg";
+                usePic = 3;
+                break;
+            case 3:
+                img.src = "rottweiler.jpg";
+                usePic = 1;
+                break;
+        }
+    }
+    
 </script>
 
 </body>
