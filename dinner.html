@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Apps Lab/Assignment 6</title>
+</head>
+ 
+<body>
+
+<h2>Vinicius Rodrigues plans dinner</h2>
+
+<form>
+    <input type="checkbox" id="serve_wine" value="True">
+    <label for="serve_wine">Serve wine</label> <br>
+
+    <input type="checkbox" id="eat_outside" value="True">
+    <label for="eat_outside">Eat Outside</label> <br>
+
+    <input type="checkbox" id="light_candles" value="False">
+    <label for="light_candles">Light candles</label> <br>
+
+    <input type="button" onclick="choices()" value="Dinner Choices">
+</form>
+
+<p id="dinnerResult"></p>
+
+<form>
+    <label for="form1_age">What is your age </label>
+    <input type ="number" id="form1_age" name="form1_age" min=10 max=50 step=2 value=30> <br>
+
+    <label for="form1_nick">What is your nickname </label>
+    <input type ="text" id="form1_nick" name="form1_nick" autofocus> <br>
+
+    <input type="button" onclick="resolveForm()" value="Get values from form">
+</form>
+
+
+<p id="result">This text will be replaced </p>
+
+<script> 
+    let my_dinner = {};
+
+    function choices() {
+        my_dinner = {};
+
+        my_dinner.wine = document.getElementById("serve_wine").checked;
+        my_dinner.outside = document.getElementById("eat_outside").checked;
+        my_dinner.candel = document.getElementById("light_candles").checked;
+
+        document.getElementById("dinnerResult").innerHTML = JSON.stringify(my_dinner);
+    }
+</script>
+
+</body>
+</html> 
